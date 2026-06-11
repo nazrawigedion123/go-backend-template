@@ -1,4 +1,4 @@
-module github.com/OnePulseOmni/pulse-wallet
+module github.com/nazrawigedion123/go-backend-template
 
 go 1.25.4
 

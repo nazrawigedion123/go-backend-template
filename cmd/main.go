@@ -1,8 +1,7 @@
 package main
 
-import "github.com/OnePulseOmni/pulse-wallet/initiator"
+import "github.com/nazrawigedion123/go-backend-template/initiator"
 
-
-func main(){
+func main() {
 	initiator.Initiate()
 }

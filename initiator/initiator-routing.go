@@ -1,9 +1,9 @@
 package initiator
 
 import (
-	samplerouting "github.com/OnePulseOmni/pulse-wallet/internal/glue/sampleRouting"
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
 	"github.com/gin-gonic/gin"
+	samplerouting "github.com/nazrawigedion123/go-backend-template/internal/glue/sampleRouting"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
 func initRoute(grg *gin.RouterGroup, handler *Handler, logger logger.Logger) {

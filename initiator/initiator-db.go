@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
 	"github.com/jackc/pgx/v4/pgxpool"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 	"github.com/spf13/viper"
 )
 

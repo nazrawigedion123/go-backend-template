@@ -1,9 +1,9 @@
 package persistencedb
 
 import (
-	"github.com/OnePulseOmni/pulse-wallet/internal/constant/model/db"
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
 	"github.com/jackc/pgx/v4/pgxpool"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
 type PersistenceDB struct {

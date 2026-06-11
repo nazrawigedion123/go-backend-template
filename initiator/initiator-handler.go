@@ -1,9 +1,9 @@
 package initiator
 
 import (
-	"github.com/OnePulseOmni/pulse-wallet/internal/handler"
-	samplehandler "github.com/OnePulseOmni/pulse-wallet/internal/handler/sample-Handler"
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
+	"github.com/nazrawigedion123/go-backend-template/internal/handler"
+	samplehandler "github.com/nazrawigedion123/go-backend-template/internal/handler/sample-Handler"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
 type Handler struct {

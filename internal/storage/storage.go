@@ -3,7 +3,7 @@ package storage
 import (
 	"context"
 
-	"github.com/OnePulseOmni/pulse-wallet/internal/constant/model/db"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
 )
 
 type Sample interface {

@@ -3,7 +3,7 @@ package initiator
 import (
 	"os"
 
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"

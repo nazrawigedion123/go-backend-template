@@ -1,10 +1,10 @@
 package initiator
 
 import (
-	"github.com/OnePulseOmni/pulse-wallet/internal/constant/model/persistencedb"
-	"github.com/OnePulseOmni/pulse-wallet/internal/storage"
-	samplestorage "github.com/OnePulseOmni/pulse-wallet/internal/storage/sample-storage"
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/persistencedb"
+	"github.com/nazrawigedion123/go-backend-template/internal/storage"
+	samplestorage "github.com/nazrawigedion123/go-backend-template/internal/storage/sample-storage"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
 type Persistance struct {

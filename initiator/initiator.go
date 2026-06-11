@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/OnePulseOmni/pulse-wallet/internal/constant/model/persistencedb"
-	"github.com/OnePulseOmni/pulse-wallet/internal/handler/middleware"
 	"github.com/gin-gonic/gin"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/persistencedb"
+	"github.com/nazrawigedion123/go-backend-template/internal/handler/middleware"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 )

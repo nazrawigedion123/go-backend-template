@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/OnePulseOmni/pulse-wallet/internal/constant/model/db"
+import "github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
 
 // CreateSampleRequest represents the request body for creating a sample
 type CreateSampleRequest struct {

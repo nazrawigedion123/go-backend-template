@@ -5,8 +5,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
 	"github.com/gin-gonic/gin"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

@@ -3,10 +3,10 @@ package samplerouting
 import (
 	"net/http"
 
-	"github.com/OnePulseOmni/pulse-wallet/internal/glue/routing"
-	"github.com/OnePulseOmni/pulse-wallet/internal/handler"
-	"github.com/OnePulseOmni/pulse-wallet/platform/logger"
 	"github.com/gin-gonic/gin"
+	"github.com/nazrawigedion123/go-backend-template/internal/glue/routing"
+	"github.com/nazrawigedion123/go-backend-template/internal/handler"
+	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
 func RegisterSampleRouter(
