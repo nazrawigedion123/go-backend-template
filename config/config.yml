@@ -1,0 +1,8 @@
+
+db:
+  migration_path: internal/constant/query/schemas
+  migration_path_up: internal/constant/query/schemas/up
+  url: postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable
+app:
+  host: 0.0.0.0
+  port: 8097
