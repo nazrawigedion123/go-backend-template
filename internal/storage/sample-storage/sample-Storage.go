@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/persistencedb"
+	dbinterface "github.com/nazrawigedion123/go-backend-template/internal/constant/db/db_interface"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/db/generated"
 	"github.com/nazrawigedion123/go-backend-template/internal/storage"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 	"go.uber.org/zap"
@@ -13,11 +13,11 @@ import (
 
 type sampleStorage struct {
 	logger        logger.Logger
-	persistencedb *persistencedb.PersistenceDB
+	persistencedb *dbinterface.PersistenceDB
 }
 
 // New creates a new sample storage instance
-func New(logger logger.Logger, persistencedb *persistencedb.PersistenceDB) storage.Sample {
+func New(logger logger.Logger, persistencedb *dbinterface.PersistenceDB) storage.Sample {
 	return &sampleStorage{
 		logger:        logger,
 		persistencedb: persistencedb,
@@ -25,7 +25,7 @@ func New(logger logger.Logger, persistencedb *persistencedb.PersistenceDB) stora
 }
 
 // Create inserts a new sample record
-func (s *sampleStorage) Create(ctx context.Context, params db.CreateSampleParams) (*db.Sample, error) {
+func (s *sampleStorage) Create(ctx context.Context, params generated.CreateSampleParams) (*generated.Sample, error) {
 
 	sample, err := s.persistencedb.Queries.CreateSample(ctx, params)
 	if err != nil {
@@ -37,7 +37,7 @@ func (s *sampleStorage) Create(ctx context.Context, params db.CreateSampleParams
 }
 
 // GetAll retrieves all samples
-func (s *sampleStorage) GetAll(ctx context.Context) ([]db.Sample, error) {
+func (s *sampleStorage) GetAll(ctx context.Context) ([]generated.Sample, error) {
 
 	samples, err := s.persistencedb.Queries.GetAllSamples(ctx)
 	if err != nil {

@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/dto"
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/response"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/db/generated"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/dto"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/response"
 	"github.com/nazrawigedion123/go-backend-template/internal/handler"
 	"github.com/nazrawigedion123/go-backend-template/internal/module"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
@@ -42,7 +42,7 @@ func (h *sampleHandler) Create(c *gin.Context) {
 	}
 
 	// Prepare params
-	params := db.CreateSampleParams{
+	params := generated.CreateSampleParams{
 		Name:  req.Name,
 		Email: req.Email,
 	}

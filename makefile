@@ -1,4 +1,4 @@
-MIGRATION_DIR := internal/constant/query/schemas
+MIGRATION_DIR := internal/constant/db/schemas
 SWAG_CMD := swag
 SWAG_INIT_FLAGS := -g cmd/main.go
 .PHONY: create-migration-dir
@@ -26,15 +26,15 @@ clean:
 	@echo "Cleaned up migrations directory."
 
 migrate-down:
-	- migrate -database postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/query/schemas -verbose down $(N)
+	- migrate -database postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/db/schemas -verbose down $(N)
 migrate-up:
-	- migrate -database postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/query/schemas -verbose up
+	- migrate -database postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/db/schemas -verbose up
 migrate-down-test:
-	- migrate -postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/query/schemas -verbose down
+	- migrate -postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/db/schemas -verbose down
 migrate-up-test:
-	- migrate -postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/query/schemas -verbose up
+	- migrate -postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable -path internal/constant/db/schemas -verbose up
 migrate-create:
-	- migrate create -ext sql -dir internal/constant/query/schemas -tz "UTC" $(name)
+	- migrate create -ext sql -dir internal/constant/db/schemas -tz "UTC" $(name)
 swagger:
 	-swag fmt && swag init -g cmd/main.go
 run:

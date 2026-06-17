@@ -8,7 +8,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/persistencedb"
+
+	dbinterface "github.com/nazrawigedion123/go-backend-template/internal/constant/db/db_interface"
 	"github.com/nazrawigedion123/go-backend-template/internal/handler/middleware"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -47,15 +48,12 @@ func Initiate() {
 	log.Info("database connection initialized")
 
 	// // initializing migration
-	logger.Info(ctx, "initializing migration")
-	InitMigration(viper.GetString("db.url"), viper.GetString("db.migration_path"))
-	logger.Info(ctx, "done initializing migration")
-
+	
 	// initializing persistence layer which is responsible to communicate with the database and module layer
 	// which is used as middleware between database and module layer of the application
 
 	logger.Info(ctx, "initializing persistence layer ")
-	persistenceDB := persistencedb.New(pgxPool, logger)
+	persistenceDB := dbinterface.New(pgxPool, logger)
 	persistence := initPersistence(&persistenceDB, logger)
 	logger.Info(ctx, "done initializing persistence layer")
 	logger.Info(ctx, "initializing client layer")

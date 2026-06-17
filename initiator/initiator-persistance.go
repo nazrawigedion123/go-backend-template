@@ -1,7 +1,7 @@
 package initiator
 
 import (
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/persistencedb"
+	dbinterface "github.com/nazrawigedion123/go-backend-template/internal/constant/db/db_interface"
 	"github.com/nazrawigedion123/go-backend-template/internal/storage"
 	samplestorage "github.com/nazrawigedion123/go-backend-template/internal/storage/sample-storage"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
@@ -12,7 +12,7 @@ type Persistance struct {
 	Logger logger.Logger
 }
 
-func initPersistence(persistencedb *persistencedb.PersistenceDB, logger logger.Logger) *Persistance {
+func initPersistence(persistencedb *dbinterface.PersistenceDB, logger logger.Logger) *Persistance {
 	sample := samplestorage.New(logger, persistencedb)
 
 	return &Persistance{

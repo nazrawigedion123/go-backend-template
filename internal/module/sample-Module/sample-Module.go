@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/db/generated"
 	"github.com/nazrawigedion123/go-backend-template/internal/module"
 	"github.com/nazrawigedion123/go-backend-template/internal/storage"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
@@ -23,7 +23,7 @@ func New(logger logger.Logger, sampleStorage storage.Sample) module.SampleModule
 	}
 }
 
-func (m *sampleModule) Create(ctx context.Context, params db.CreateSampleParams) (*db.Sample, error) {
+func (m *sampleModule) Create(ctx context.Context, params generated.CreateSampleParams) (*generated.Sample, error) {
 	m.logger.Debug(ctx, "creating new sample",
 		zap.String("name", params.Name),
 		zap.String("email", params.Email),
@@ -46,7 +46,7 @@ func (m *sampleModule) Create(ctx context.Context, params db.CreateSampleParams)
 
 }
 
-func (m *sampleModule) GetAll(ctx context.Context) ([]db.Sample, error) {
+func (m *sampleModule) GetAll(ctx context.Context) ([]generated.Sample, error) {
 	m.logger.Debug(ctx, "fetching all samples")
 
 	samples, err := m.sampleStorage.GetAll(ctx)

@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/nazrawigedion123/go-backend-template/internal/constant/model/db"
+import "github.com/nazrawigedion123/go-backend-template/internal/constant/db/generated"
 
 // CreateSampleRequest represents the request body for creating a sample
 type CreateSampleRequest struct {
@@ -12,6 +12,6 @@ type CreateSampleRequest struct {
 
 // CreateSampleResponse represents the response for creating a sample
 type CreateSampleResponse struct {
-	Message string     `json:"message"`
-	Sample  *db.Sample `json:"sample"`
+	Message string            `json:"message"`
+	Sample  *generated.Sample `json:"sample"`
 }
