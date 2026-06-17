@@ -2,7 +2,12 @@
 db:
   migration_path: internal/constant/db/schemas
   migration_path_up: internal/constant/db/schemas/up
-  url: postgresql://postgres:secret@172.28.22.99:5436/mobile?sslmode=disable
+  host: localhost
+  port: 5432
+  user: postgres
+  password: secret
+  dbname: mobile
+  sslmode: disable
 app:
   host: 0.0.0.0
   port: 8097

@@ -44,7 +44,16 @@ func Initiate() {
 
 	// initailizing database connection
 	log.Info("initializing database connect")
-	pgxPool := initDB(viper.GetString("db.url"), logger)
+	dbURL := fmt.Sprintf(
+		"postgresql://%s:%s@%s:%d/%s?sslmode=%s",
+		viper.GetString("db.user"),
+		viper.GetString("db.password"),
+		viper.GetString("db.host"),
+		viper.GetInt("db.port"),
+		viper.GetString("db.dbname"),
+		viper.GetString("db.sslmode"),
+	)
+	pgxPool := initDB(dbURL, logger)
 	log.Info("database connection initialized")
 
 	// // initializing migration
