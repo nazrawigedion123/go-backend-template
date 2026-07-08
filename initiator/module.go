@@ -2,7 +2,7 @@ package initiator
 
 import (
 	"github.com/nazrawigedion123/go-backend-template/internal/module"
-	samplemodule "github.com/nazrawigedion123/go-backend-template/internal/module/sample-Module"
+	"github.com/nazrawigedion123/go-backend-template/internal/module/samplemodule"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 

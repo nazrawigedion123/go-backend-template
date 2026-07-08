@@ -1,9 +1,9 @@
 package initiator
 
 import (
-	dbinterface "github.com/nazrawigedion123/go-backend-template/internal/constant/db/db_interface"
+	"github.com/nazrawigedion123/go-backend-template/internal/constant/db/dbinterface"
 	"github.com/nazrawigedion123/go-backend-template/internal/storage"
-	samplestorage "github.com/nazrawigedion123/go-backend-template/internal/storage/sample-storage"
+	"github.com/nazrawigedion123/go-backend-template/internal/storage/samplestorage"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )
 
