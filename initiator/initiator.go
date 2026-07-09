@@ -80,6 +80,7 @@ func Initiate() {
 	logger.Info(ctx, "done initializing handler layer")
 
 	logger.Info(ctx, "initializing http server")
+	gin.SetMode(gin.ReleaseMode)
 	server := gin.New()
 	server.Use(middleware.GinLogger(logger))
 	server.Use(middleware.CORS())

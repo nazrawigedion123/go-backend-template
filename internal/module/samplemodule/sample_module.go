@@ -38,7 +38,7 @@ func (m *sampleModule) Create(ctx context.Context, params generated.CreateSample
 	}
 
 	m.logger.Info(ctx, "sample created successfully",
-		zap.String("sample_id", string(sample.ID)),
+		zap.Int64("sample_id", sample.ID),
 		zap.String("email", sample.Email),
 	)
 
@@ -55,7 +55,7 @@ func (m *sampleModule) GetAll(ctx context.Context) ([]generated.Sample, error) {
 		return nil, fmt.Errorf("get all samples: %w", err)
 	}
 
-	m.logger.Debug(ctx, "samples fetched successfully", zap.String("count", string(len(samples))))
+	m.logger.Debug(ctx, "samples fetched successfully", zap.Int("count", len(samples)))
 	return samples, nil
 }
 

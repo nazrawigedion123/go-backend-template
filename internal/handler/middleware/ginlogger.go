@@ -37,7 +37,7 @@ func GinLogger(log logger.Logger) gin.HandlerFunc {
 			zap.String("ip", ctx.ClientIP()),
 			zap.Any("query", query),
 			zap.String("user-agent", ctx.Request.UserAgent()),
-			zap.Float64("latency", latency.Minutes()),
+			zap.Float64("latency", latency.Seconds()),
 		}
 		log.Info(context.Background(), "Gin Request", fields...)
 	}
