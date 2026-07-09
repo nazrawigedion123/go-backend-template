@@ -1,4 +1,8 @@
-
+app:
+  name: go-backend-template
+  host: 0.0.0.0
+  port: 8097
+  timeout: 30s
 db:
   migration_path: internal/constant/db/schemas
   migration_path_up: internal/constant/db/schemas/up
@@ -8,9 +12,6 @@ db:
   password: secret
   dbname: mobile
   sslmode: disable
-app:
-  host: 0.0.0.0
-  port: 8097
-  timeout: 30s
+
 logger:
   level: 0

@@ -34,6 +34,6 @@ func initDB(dbSource string, log logger.Logger) *pgxpool.Pool {
 		log.Fatal(context.Background(), fmt.Sprintf("failed to connect to database (%s): %v", dbSource, err))
 	}
 
-	log.Info(context.Background(), fmt.Sprintf("connected to %s database successfully", dbSource))
+	// log.Info(context.Background(), fmt.Sprintf("connected to %s database successfully", dbSource))
 	return conn
 }

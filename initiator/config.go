@@ -61,10 +61,10 @@ func InitConfig(config Config) error {
 		)
 	}
 
-	config.Logger.Info("Configuration initialized successfully",
-		zap.Strings("config_files", config.Names),
-		zap.String("config_path", config.Path),
-	)
+	// config.Logger.Info("Configuration initialized successfully",
+	// 	zap.Strings("config_files", config.Names),
+	// 	zap.String("config_path", config.Path),
+	// )
 
 	return nil
 }
