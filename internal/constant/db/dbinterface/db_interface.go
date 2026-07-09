@@ -1,7 +1,7 @@
 package dbinterface
 
 import (
-	"github.com/jackc/pgx/v4/pgxpool"
+	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/nazrawigedion123/go-backend-template/internal/constant/db/generated"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 )

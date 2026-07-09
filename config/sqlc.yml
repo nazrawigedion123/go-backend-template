@@ -9,7 +9,7 @@ sql:
       go:
         package: "generated"
         out: "../internal/constant/db/generated"
-        sql_package: "pgx/v4"  # Updated to v5
+        sql_package: "pgx/v5"  # Updated to v5
         emit_json_tags: true    # Recommended for API responses
         emit_interface: true    # Generates Querier interface for testing/mocking
         emit_empty_slices: true # Returns empty slices instead of nil

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jackc/pgx/v4/pgxpool"
+	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/nazrawigedion123/go-backend-template/platform/logger"
 	"github.com/spf13/viper"
 )
@@ -29,7 +29,7 @@ func initDB(dbSource string, log logger.Logger) *pgxpool.Pool {
 	}
 	config.MaxConnIdleTime = idleConnTimeout
 
-	conn, err := pgxpool.ConnectConfig(context.Background(), config)
+	conn, err := pgxpool.NewWithConfig(context.Background(), config)
 	if err != nil {
 		log.Fatal(context.Background(), fmt.Sprintf("failed to connect to database (%s): %v", dbSource, err))
 	}

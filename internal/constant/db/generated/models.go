@@ -5,15 +5,15 @@
 package generated
 
 import (
-	"time"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 type Sample struct {
-	ID        int64      `json:"id"`
-	Name      string     `json:"name"`
-	Email     string     `json:"email"`
-	Age       *int32     `json:"age"`
-	IsActive  *bool      `json:"is_active"`
-	CreatedAt *time.Time `json:"created_at"`
-	UpdatedAt *time.Time `json:"updated_at"`
+	ID        int64              `json:"id"`
+	Name      string             `json:"name"`
+	Email     string             `json:"email"`
+	Age       *int32             `json:"age"`
+	IsActive  *bool              `json:"is_active"`
+	CreatedAt pgtype.Timestamptz `json:"created_at"`
+	UpdatedAt pgtype.Timestamptz `json:"updated_at"`
 }
