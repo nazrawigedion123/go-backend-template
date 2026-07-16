@@ -7,6 +7,9 @@ import (
 )
 
 func printPrettyRoutes(server *gin.Engine) {
+	if gin.Mode()==gin.ReleaseMode{
+		return
+	}
 	fmt.Printf("\n%s🗺️  Registered Routes:%s\n", colorBold+colorCyan, colorReset)
 	fmt.Println("----------------------------------------------------------------")
 
